@@ -23,14 +23,14 @@
       return $http.post(baseUrl+'todos', info)
                   .then(function(response){
                     getAll();
-                  })
+                  });
     }
     function getAll(){
       return $http.get(baseUrl+'todos')
                   .then(function(response){
                     o.todos = response.data;
                     console.log('TodoService todos', o.todos);
-                  })
+                  });
     }
     // var newTodo = {
     //   description: 'new description',
@@ -40,13 +40,13 @@
       return $http.put(baseUrl+'todo/'+id, newTodo)
                   .then(function(response){
                     getAll();
-                  })
+                  });
     }
     function deleteTodo(id){
       return $http.delete(baseUrl+'todos/'+id)
                   .then(function(response){
                     getAll();
-                  })
+                  });
     }
   }
 })();
