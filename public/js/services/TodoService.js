@@ -37,7 +37,7 @@
     //   isComplete: 'new isComplete'
     // };
     function updateTodo(id, newTodo){
-      return $http.put(baseUrl+'todo/'+id, newTodo)
+      return $http.put(baseUrl+'todos/'+id, newTodo)
                   .then(function(response){
                     getAll();
                   });
